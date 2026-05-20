@@ -141,7 +141,7 @@ All key values are defined at the top of the `.ino` file:
    - File → Preferences → Additional Board Manager URLs:
      `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json`
    - Tools → Board → Boards Manager → search `esp32` → install by Espressif (v3.x)
-3. Open `esp32_bot_main/esp32_bot_main.ino`
+3. Open [`esp32_bot_main/esp32_bot_main.ino`](esp32_bot_main/esp32_bot_main.ino)
 4. Select board: `ESP32 Dev Module`
 5. Select correct COM port
 6. Upload
