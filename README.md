@@ -46,7 +46,7 @@ A custom-built 4-wheel drive skid steer robot controlled via FlySky FS-i6X trans
 - **Arm switch (CH6)** — bot only moves when armed, safe by default
 - **Speed mode (CH7)** — toggle between 100% and 50% power
 - **Front/Back invert (CH5)** — instantly swap drive direction when bot is flipped, drive normally in both orientations
-- **Dual-orientation chassis** — symmetrical PVC chassis runs in both flipped and normal orientation
+- **Front/Back invert (CH5)** — instantly designates either end of the bot as "front" without physically turning around — useful when bot ends up facing the wrong direction during a match
 
 ---
 
@@ -151,23 +151,7 @@ All key values are defined at the top of the `.ino` file:
 
 ---
 
-## 📁 Repository Structure
 
-```
-4WD-Skid-Steer-RC-Bot/
-│
-├── esp32_bot_main/
-│   └── esp32_bot_main.ino    # Complete ESP32 firmware
-│
-├── images/
-│   ├── bot_on_track.jpg
-│   ├── bot_obstacle.jpg
-│   ├── chassis_motors.jpg
-│   ├── motor_side_view.jpg
-│   └── electronics_layout.jpg
-│
-└── README.md
-```
 
 ---
 
@@ -177,7 +161,7 @@ All key values are defined at the top of the `.ino` file:
 - **BTS7960 VCC at 3.3V** — connect BTS7960 VCC to ESP32 3.3V pin, not 5V. ESP32 GPIO outputs 3.3V logic so VCC must match for correct switching thresholds.
 - **iBUS single wire** — all 10 channels come through GPIO 16 (Serial2 RX). No need to wire individual PWM channels from receiver.
 - **Fuse as power switch** — 50A blade fuse in inline holder. Pull to cut power, insert to power on. Acts as overcurrent protection simultaneously.
-- **Symmetrical chassis** — 5mm PVC plate is identical top and bottom. Bot drives in both orientations. Use CH5 invert switch to flip control axes when bot is upside down.
+- **Invert switch** — CH5 swaps throttle and steering axes so either end of the bot can act as the front. Electronics are mounted on top so the bot is single-orientation only — invert switch is purely for redirecting drive direction without physically turning the bot around.
 - **Motor direction** — if any motor spins the wrong way, swap M+ and M− wires on that driver. No code change needed.
 - **Right motor trim** — if bot drifts to one side, add a flat `RIGHT_COMP_ADD` offset to the slower side PWM after all other processing.
 
