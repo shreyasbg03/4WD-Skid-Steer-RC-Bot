@@ -45,7 +45,6 @@ A custom-built 4-wheel drive skid steer robot controlled via FlySky FS-i6X trans
 - **Right motor trim** — flat PWM offset compensates for physical motor speed mismatch
 - **Arm switch (CH6)** — bot only moves when armed, safe by default
 - **Speed mode (CH7)** — toggle between 100% and 50% power
-- **Front/Back invert (CH5)** — instantly swap drive direction when bot is flipped, drive normally in both orientations
 - **Front/Back invert (CH5)** — instantly designates either end of the bot as "front" without physically turning around — useful when bot ends up facing the wrong direction during a match
 
 ---
@@ -148,10 +147,6 @@ All key values are defined at the top of the `.ino` file:
 6. Upload
 
 > No external libraries required — iBUS parsing is fully custom implemented.
-
----
-
-
 
 ---
 
