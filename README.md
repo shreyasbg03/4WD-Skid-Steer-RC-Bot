@@ -10,7 +10,7 @@ A custom-built 4-wheel drive skid steer robot controlled via FlySky FS-i6X trans
 |---|---|
 | ![Bot on track](images/bot_on_track.jpg) | ![Bot on obstacle course](images/bot_obstacle.jpg) |
 
-| Chassis with Motors | Motor Side View |
+| Chassis with Motors | Motor Bottom View |
 |---|---|
 | ![Chassis build](images/chassis_motors.jpg) | ![Motor side view](images/motor_side_view.jpg) |
 
